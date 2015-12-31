@@ -1,6 +1,6 @@
 <?php include 'view/header.php'; ?>
 
-<html>
+
 <main>
     <h1>customer</h1>
 
@@ -30,7 +30,7 @@
         <?php endforeach; ?>
     </table>
 
-</html>
+
 
 
 

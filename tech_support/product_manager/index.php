@@ -22,18 +22,12 @@ if ($action == 'list_products') {
 else if ($action == "show_add_form"){
 	include('show_add_form.php');
 }
-else if ($action == 'add_products'){
+else if ($action == 'add_product_form'){
 	include('add_product_form.php');
-/*
-	$productCode = filter_input(INPUT_POST, 'productCode');
+	$productCode = filter_input(INPUT_POST, 'productCode',FILTER_VALIDATE_INT);
 	$name = filter_input(INPUT_POST, 'name');
-	$version = filter_input(INPUT_POST, 'version');
-	$releaseDate = filter_input(INPUT_POST, 'releaseDate');
-*/	
-	$productCode = filter_input(INPUT_POST, 'productCode');
-	$name = filter_input(INPUT_POST, 'name');
-	$version = filter_input(INPUT_POST, 'version', FILTER_VALIDATE_FLOAT);
-	$releaseDate = filter_input(INPUT_POST, 'releaseDate');
+	$version = filter_input(INPUT_POST, 'version', FILTER_VALIDATE_INT);
+	$releaseDate = filter_input(INPUT_POST, 'releaseDate', FILTER_VALIDATE_FLOAT);
 
 	if($productCode == NULL && $name == NULL && $version == NULL && $releaseDate == NULL){
 		$error = "Invalid product data check fields and try again.";

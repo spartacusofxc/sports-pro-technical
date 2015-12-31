@@ -11,84 +11,75 @@ $statement->execute();
 $product = $statement->fetch();
 $statement->closeCursor();
 ?>
-<!DOCTYPE html>
-<html>
 
-<!-- the head section -->
-<head>
-    <title>Customer manger</title>
-</head>
+<?php include '../view/header.php'; ?>
 
-<!-- the body section -->
-<body>
-    <header><h1>Customer Manager</h1></header>
+
 
     <main>
-        <h1>view/update customer </h1>
+        <h2>view/update customer </h2>
         <form action="edit_customer.php" method="post"
               id=edit_product_form">
             <input type="hidden" name="customer_id"
                    value="<?php echo $customers['customerID']; ?>">
-
+			<p>
             <label>firstName:</label>
             <input type="input" name="firstName"
                    value="<?php echo $customers['firstName']; ?>">
-            <br>
-
+    		</p> 
+    	   
+			<p>
             <label>lastName:</label>
             <input type="input" name="lastName"
                    value="<?php echo $customers['lastName']; ?>">
-            <br>
+           </p> 
 
             <label>Address:</label>
             <input type="input" name="address"
                    value="<?php echo $customers['address']; ?>">
-            <br>
+       	 <p>
 
             <label>City:</label>
             <input type="input" name="city"
                    value="<?php echo $customers['city']; ?>">
-            <br>
+            </p>
             
             <label>state:</label>
             <input type ="input" name="state"
             	 value="<?php echo $customers['state']; ?>">
-            <br>
+        <p>
             
             <label>postalCode</label>
             <input type ="input" name="PostalCode"
-            	 value="<?php echo $customers['PostalCode']; ?>">
-            <br>
+        	 value="<?php echo $customers['PostalCode']; ?>">
+        </p> 
+            <p>
             
             <label>countryCode</label>
             <input type ="input" name="CountryCode"
             	 value="<?php echo $customers['CountryCode']; ?>">
-            <br>
+            </p>
             
 			<label>phone</label>
             <input type ="input" name="	phone"
             	 value="<?php echo $customers['phone']; ?>">
-            <br>
+            <p>
             
             <label>email</label>
             <input type ="input" name="email"
             	 value="<?php echo $customers['email']; ?>">
-            <br>
+            </p>
 	
 			<label>password</label>
-            <input type ="input" name="password"
-            	 value="<?php echo $customers['password']; ?>">
-            <br>
+            <input type ="input" name="password">
+            <p>
 
             <label>&nbsp;</label>
             <input type="submit" value="Save Changes">
-            <br>
+            </p>
         </form>
         <p><a href="index.php">View Product List</a></p>
     </main>
 
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?></p>
-    </footer>
-</body>
-</html>
+   
+<?php include '../view/footer.php'; ?>

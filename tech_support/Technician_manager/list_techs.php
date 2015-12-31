@@ -1,12 +1,9 @@
 
-<?php require('../model/database.php'); ?>
+
 
 
 <?php include 'view/header.php'; ?>
 
-
-
-<html>
 <main>
     <h1>Techs</h1>
 	<head>
@@ -43,15 +40,15 @@
     </table>
     
     <p><a href="?action=show_add_techs_form">Add tech</a></p>
-        
-
-
-
-</htmL>
-
-
+ 
+ </main>       
 
 <?php include 'view/footer.php'; ?>
+
+
+
+
+
 
 
 

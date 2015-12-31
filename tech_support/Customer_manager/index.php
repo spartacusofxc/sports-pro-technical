@@ -51,38 +51,6 @@ if ($action == 'edit_customer_form'){
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>SportsPro Technical Support</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-<body>
-    <main>
-    
-    <!-- display customer search form -->
-    <h1>Customer Search</h1>       
-    <form action="../model/customer_db.php" method="post">
-        <label>Last Name:</label>
-        <input type="text" name="lastName">&nbsp;
-        <input type="submit" value="Search"><br>
-    </form>
-    <br>
-     
-   
- <!-- display a table of customers found in search -->
-    <h1>Results</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Email Address</th>
-            <th>City</th>
-            <th>&nbsp;</th>
-        </tr>
-            </table>
-    </main>
-</body>
-</html>
 
 
 

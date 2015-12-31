@@ -2,7 +2,7 @@
 <?php 
 
 require('../model/database.php');
-require('add_product_form.php');
+//require('add_product_form.php');
 $query = 'SELECT *
           FROM products
           ORDER BY productCode';
@@ -19,9 +19,9 @@ $statement->closeCursor();
 
     <main>
         <h1>Add Product</h1>
-        <form method="post" action=""
-       		id="add_product_form">
-       		<input type= "hidden" name="action" value="add_products" />
+        <form method="post" action="index.php"
+       		id="aligned">
+      		<input type= "hidden" name="action" value="add_product_form" /> 
 <!--
             <label>Products:</label>
             <select name="productCode">
@@ -51,12 +51,12 @@ $statement->closeCursor();
 		<p>
             <label>Release Date:</label>
             <input type="text"  name="releaseDate">
-            format
+            Use 'yyy-mm-dd'format 
 		</p>
 
             <label>&nbsp;</label>
             <input type="submit" value="Add Product"><br>
         </form>
-     <p><a href="index.php">View Product List</a></p>
+     <p><a href="index.php?action=list_products">View Product List</a></p>
     </main>
  <?php include '../view/footer.php'; ?>

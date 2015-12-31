@@ -18,17 +18,15 @@ function add_product( $productCode, $name, $version, $releaseDate){
               VALUES
                  (:productCode, :name, :version :releaseDate)';
     $statement = $db->prepare($query);
-    $statement->bindParam(':productCode', $productCode);
-    $statement->bindParam(':name', $name);
-    $statement->bindParam(':version', $version);
-    $statement->bindParam(':releaseDate', $releaseDate);
+    $statement->bindValue(':productCode', $productCode);
+    $statement->bindValue(':name', $name);
+    $statement->bindValue(':version', $version);
+    $statement->bindValue(':releaseDate', $releaseDate);
     $statement->execute();
-//     $products = $statement->fetch();
     $statement->closeCursor();
-//     return $products;
 
 }
-/*
+
 // Validate inputs
 if ($productCode == null || $productCode == false ||
 	 $name == null || $version == null || $releaseDate == null || $releaseDate == false) {
@@ -36,9 +34,9 @@ if ($productCode == null || $productCode == false ||
     
 } else {
     require_once('../model/database.php');
-
-    // Display the Product List page
- include('index.php');
 }
-*/
+    // Display the Product List page
+// include('index.php');
+
+
 ?>
